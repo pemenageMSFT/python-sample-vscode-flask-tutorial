@@ -11,13 +11,13 @@ variables:
   azureServiceConnectionId: 'a51c5bf0-8226-4259-8d29-cc632dcadc71'
 
   # Web app name
-  webAppName: 'pemenageTestPipeline'
+  webAppName: 'SreePeterDemo'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
   # Environment name
-  environmentName: 'pemenageTestPipeline'
+  environmentName: 'SreePeterDemo'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
@@ -79,7 +79,7 @@ stages:
             displayName: 'Use Python version'
 
           - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : pemenageTestPipeline'
+            displayName: 'Deploy Azure Web App : SreePeterDemo'
             inputs:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
